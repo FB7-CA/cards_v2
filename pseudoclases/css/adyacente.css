@@ -1,0 +1,11 @@
+h1 {
+    background: #eee;
+}
+
+h1 ~ p { /* aplica a todos los parrafos o los que estan en la misma linea*/
+    color: RED;
+}
+
+h1 + p { /*aplica nada mas al primer inmediato*/
+    color: blue;
+}
