@@ -7,5 +7,15 @@ h1 ~ p { /* aplica a todos los parrafos o los que estan en la misma linea*/
 }
 
 h1 + p { /*aplica nada mas al primer inmediato*/
+    transition: 1s;
     color: blue;
 }
+
+h1 + p:hover {
+    transition: 1s;
+    color: #ddd;
+    text-shadow: 1px 1px 0px #000;
+    cursor: pointer;
+}
+
+/* aparte de hover tenemos */

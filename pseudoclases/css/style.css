@@ -15,6 +15,7 @@ body > div {
     margin: 10px;
     float: left;
     position: relative;
+    transition: 0.5s;
 }
 
 div > img {
@@ -47,4 +48,25 @@ div > p {
 }
 
 
+body > div:nth-child(2n) {
+    background: #333;
+    box-shadow: 3px 3px 10px #000;
+}
 
+body > div:last-of-type {
+    background: RED;
+}
+
+body > div:first-of-type {
+    background: RED;
+}
+
+body > div:nth-last-child(4) {
+    background: #000;
+}
+
+body > div:hover {
+    transition: 0.5s;
+    background: #000;
+    cursor: pointer;
+}
