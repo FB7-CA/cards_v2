@@ -16,6 +16,9 @@ h1 + p:hover {
     color: #ddd;
     text-shadow: 1px 1px 0px #000;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 2rem;
+
 }
 
 /* aparte de hover tenemos */

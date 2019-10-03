@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.cuadrado {
+    transition: 0.2s;
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px;
+    box-shadow: 1px 1px 0px rgb(131, 131, 131);
+    display: inline-block;
+}
+
+.cuadrado:first-child {
+    background: rgb(135, 183, 232);
+}
+
+.cuadrado:last-child {
+    background: rgb(227, 218, 119);
+}
+
+.cuadrado:hover {
+    transition: 0.2s;
+    cursor: pointer;
+    background: #ccc;
+    box-shadow: -1px -1px 0px rgb(131, 131, 131);
+}
+
+.cuadrado:first-child:hover {
+    background: rgb(25, 124, 223);
+}
+
+.cuadrado:last-child:hover {
+    background: rgb(191, 176, 16);
+}
+
+.cuadrado:first-of-type {
+    background: RED;
+}
+
+.cuadrado:nth-child(2n-1) {
+    background: #000;
+}
+
+a:link {
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+}
+
+a:visited {
+    color:rgb(56, 181, 85);
+    background: BLUE;
+}
+
+a:hover{
+    background: YELLOW;
+    color: #000;
+}
+
+a:active{
+    border-radius: 10px;
+    background: RED;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #000;
+}
+
+
+button {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: #ccc;
+    color: #333;
+}
+
+button:hover {
+    transition: 0.3s;
+    background: #333;
+    color: #ccc;
+}
+
+button:active {
+    background: RED;
+    color: #fff;
+}
+
+/* input[type="checkbox"] + div {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    background: #112233;
+    color: #fff;
+}
+
+input[type='checkbox']:checked + div {
+    background: rgb(235, 21, 21);
+} */
+
+
+
+.final {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    margin-top: 100px;
+}
+
+
+/* .final::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 10px;
+}
+
+.final::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+} */
+
+
+
+
+
+.final:hover::before {
+    content: attr(title);
+    position: absolute;
+    display: block;
+    width: inherit; /*Aqui es donde se esta herando la propiedad del padre*/
+    height: 30px;
+    background: #000;
+    top: -40px;
+    left: 0;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+
+
+.checkbox {
+    transition: 0.5s;
+    width: 200px;
+    height: 100px;
+    background: rgb(74, 74, 74);
+    border-radius: 50px;
+    position: relative;
+}
+
+.checkbox::before {
+    transition: 0.3s all ease-in-out;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: rgb(103, 8, 8);
+    border-radius: 50px;
+    display: block;
+    transform: translate(10px, 10px);
+}
+
+input[type='checkbox']:checked ~ .checkbox::before {
+    /* transition: 0.5s; */
+    transform: translate(110px, 10px);
+    background: rgb(49, 182, 13);
+}
+
+input[type='checkbox']:checked ~ .checkbox {
+    /* transition: 0.5s; */
+    background: #eee;
+    box-shadow: 3px 3px 5px #333;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.giro {
+    /* background: #0b857d; */
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+    animation: 3s animacion linear forwards;
+    /* transition: 100ms all linear; */
+    /* border-radius: 100px; */
+    box-shadow: 5px 5px 20px #333;
+}
+
+.giro:hover {
+    transform: rotateZ(-45deg);
+    background: YELLOW;
+    box-shadow: 3px 3px 20px #ccc;
+}
+
+/* aqui nada mas se define las propiedacdes que se aplican a los elementos */
+@keyframes animacion {
+    0% {
+        border: 1px solid #b86012;
+        box-shadow: 5px 5px 20px #333;
+        background: rgba(162, 130, 235, 0.3);
+    }
+
+    25% {
+        transform: rotateZ(45deg);
+        border: 1px solid #6c710b;
+    }
+
+    50% {
+        margin-left: 90%;
+        background: rgba(235, 204, 130, 0.3);
+        /* border-radius: 100px; */
+        box-shadow: 5px 5px 20px #333;
+        transform: rotateZ(90deg);
+    }
+
+    75% {
+        margin-top: 40vh;
+        width: 150px;
+        height: 150px;
+        background: rgba(77, 5, 12, 0.3);
+        transform: rotateZ(135deg);
+    }
+
+    100% {
+        border: 1px solid #630808;
+    }
+}
